@@ -28,8 +28,8 @@ header {
 }
 
 header h1 {
-  font-family: Papyrus, 'Playfair Display', serif;
-  font-size: 4rem;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 3rem; /* Ajusta el tamaño a tu gusto */
   margin-bottom: 0.5rem;
 }
 
