@@ -9,11 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Fondo moderno con colores oscuros y acentos */
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
+    /* Solo aplica al header */
+    header.encabezado-futurista {
       background: linear-gradient(135deg, #0a0a23 0%, #000814 100%);
       font-family: 'Orbitron', sans-serif;
       display: flex;
@@ -21,12 +18,12 @@
       justify-content: center;
       align-items: center;
       color: white;
-      overflow: hidden;
       text-align: center;
+      padding: 3rem 1rem;
+      overflow: hidden;
     }
 
-    /* Título animado con gradiente azul eléctrico y amarillo */
-    h1.titulo {
+    header.encabezado-futurista h1 {
       font-size: 3.5rem;
       background: linear-gradient(90deg, #00bfff, #ffff00, #00bfff);
       background-size: 300%;
@@ -39,24 +36,22 @@
       margin-bottom: 1rem;
     }
 
-    /* Subtítulo más discreto pero combinado */
-    p.subtitulo {
+    header.encabezado-futurista p.subtitulo {
       font-size: 1.5rem;
       color: #f0e130;
-      opacity: 0.9;
       animation: aparecer 2s ease-out 1s forwards;
       opacity: 0;
       letter-spacing: 1px;
     }
 
-    /* Animación del gradiente */
+    /* Animación de gradiente de texto */
     @keyframes moverColor {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Animación de aparición suave */
+    /* Animación de entrada */
     @keyframes aparecer {
       from {
         transform: translateY(30px);
@@ -70,19 +65,36 @@
 
     /* Efecto neón en pantallas grandes */
     @media (min-width: 768px) {
-      h1.titulo {
+      header.encabezado-futurista h1 {
         text-shadow:
           0 0 5px #00bfff,
           0 0 10px #ffff00,
           0 0 20px #00bfff;
       }
     }
+
+    /* Estilo básico para el resto del contenido */
+    main {
+      padding: 2rem;
+      font-family: sans-serif;
+      color: #222;
+      background: #f4f4f4;
+    }
   </style>
 </head>
 <body>
 
-  <h1 class="titulo">Sociedad Fanáticos</h1>
-  <p class="subtitulo">Gestión 2026</p>
+  <!-- ENCABEZADO ESTILIZADO -->
+  <header class="encabezado-futurista">
+    <h1>Sociedad Fanáticos</h1>
+    <p class="subtitulo">Gestión 2026</p>
+  </header>
+
+  <!-- RESTO DE LA PÁGINA NORMAL -->
+  <main>
+    <h2>Bienvenidos</h2>
+    <p>Este es el contenido principal de la página...</p>
+  </main>
 
 </body>
 </html>
