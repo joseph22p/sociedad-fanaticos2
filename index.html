@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Título Futurista</title>
+  <style>
+    /* Fondo general oscuro con efecto sutil */
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at center, #0f0f1a 0%, #000000 100%);
+      color: white;
+      font-family: 'Orbitron', sans-serif; /* Tipografía futurista */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Título con estilo neón animado */
+    h1.titulo-futurista {
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #00ffe7, #7f00ff, #00ffe7);
+      background-size: 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowText 5s ease infinite, aparecer 1.5s ease-out forwards;
+      opacity: 0;
+      text-align: center;
+    }
+
+    /* Animación de color en movimiento */
+    @keyframes glowText {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Entrada suave desde abajo */
+    @keyframes aparecer {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Efecto de resplandor neón (solo en pantallas grandes) */
+    @media (min-width: 768px) {
+      h1.titulo-futurista {
+        text-shadow:
+          0 0 5px #00ffe7,
+          0 0 10px #00ffe7,
+          0 0 20px #7f00ff,
+          0 0 40px #7f00ff;
+      }
+    }
+
+    /* Importa la fuente Orbitron desde Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+  </style>
+</head>
+<body>
+
+  <h1 class="titulo-futurista">Sociedad Fanáticos 2026</h1>
+
+</body>
+</html>
